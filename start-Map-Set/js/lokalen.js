@@ -51,6 +51,8 @@ const zoekLokalen = () => {
   */
   const lokalenOpVerdieping = lokalen
     .map((lokaal) => {
+      /* Kijk goed in de console naar de OORSPRONKELIJKE lijst met lokalen.
+      Door een side effect is deze ook gewijzigd. Met behulp van de spread operator kunnen we dit oplossen! */
       const lokaalMetVerdieping = lokaal;
       lokaalMetVerdieping.verdieping = lokaalMetVerdieping.nummer.substring(
         1,
